@@ -24,6 +24,7 @@ app.listen(PORT, () => {
 });
 
 const db= require('./app/models');
+const dbConfig = require('./app/config/db.config');
 const Role = db.role;
 
 db.mongoose
