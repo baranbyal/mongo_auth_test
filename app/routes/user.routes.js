@@ -1,4 +1,4 @@
-const {aurhJwt} = require("../middleware");
+const {authJwt} = require("../middleware");
 const controller = require("../controllers/user.controller");
 
 module.exports = function(app) {
@@ -17,43 +17,43 @@ module.exports = function(app) {
 
     app.get(
         "/api/test/user",
-        [aurhJwt.verifyToken],
+        [authJwt.verifyToken],
         controller.userBoard
     );
 
     app.get(
         "/api/test/mod",
-        [aurhJwt.verifyToken, aurhJwt.isModerator],
+        [authJwt.verifyToken, authJwt.isModerator],
         controller.moderatorBoard
     );
 
     app.get(
         "/api/test/admin",
-        [aurhJwt.verifyToken, aurhJwt.isAdmin],
+        [authJwt.verifyToken, authJwt.isAdmin],
         controller.adminBoard
     );
 
     app.get(
         "/api/test/yk",
-        [aurhJwt.verifyToken, aurhJwt.isYK],
+        [authJwt.verifyToken, authJwt.isYK],
         controller.ykBoard
     );
 
     app.get(
         "/api/test/ddk",
-        [aurhJwt.verifyToken, aurhJwt.isDDK],
+        [authJwt.verifyToken, authJwt.isDDK],
         controller.ddkBoard
     );
 
     app.get(
         "/api/test/latinEgitmen",
-        [aurhJwt.verifyToken, aurhJwt.isLatinEgitmen],
+        [authJwt.verifyToken, authJwt.isLatinEgitmen],
         controller.latinEgitmenBoard
     );
 
     app.get(
         "/api/test/dansciUye",
-        [aurhJwt.verifyToken, aurhJwt.isDansciUye],
+        [authJwt.verifyToken, authJwt.isDansciUye],
         controller.dansciUyeBoard
     );
 

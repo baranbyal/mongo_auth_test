@@ -1,3 +1,6 @@
+
+
+
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -126,5 +129,4 @@ require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
 
 // set port, listen for requests
-
 
